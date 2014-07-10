@@ -33,12 +33,21 @@ module.exports = function(grunt) {
         files: '<%= jshint.test.src %>',
         tasks: ['jshint:test', 'simplemocha']
       }
+    },
+    bump: {
+      options: {
+        commitMessage: 'chore: Bump for release (v%VERSION%)',
+        files: ['package.json'],
+        commitFiles: ['package.json'],
+        push: false
+      }
     }
   });
 
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-simple-mocha');
+  grunt.loadNpmTasks('grunt-bump');
 
   grunt.registerTask('test', ['simplemocha']);
   grunt.registerTask('default', ['jshint', 'test']);
