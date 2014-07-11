@@ -3,14 +3,14 @@
 Parse svn info.
 
 ## Getting Started
-*(todo)* Install the module with: `npm install svn-info`
+Install the module with: `npm install svn-info`
 
 ## Documentation
 This module exports itself as a method you may use to asynchronously get `svn
-info` for a given path:
+info` for a given path and revision:
 
 ```javascript
-require('svn-info')('path/to/folder/under/svn', function(err, info) {
+require('svn-info')('path/to/folder/under/svn', 'HEAD', function(err, info) {
   if(err) {
     throw err;
   }
@@ -18,17 +18,21 @@ require('svn-info')('path/to/folder/under/svn', function(err, info) {
 });
 ```
 
-The first path argument is optional and will default to the current working
-directory.
+The first argument, the repo path, is optional and will default to the current
+working directory.
+
+The second argument, the revision, is optional will default to `'HEAD'`. Note
+that if you specify a revision you must also specify a path.
 
 There's also an synchronous flavor:
 
 ```javascript
-var info = require('svn-info').sync('my/repo/path');
+var info = require('svn-info').sync('my/repo/path', 194);
 do_something_with(info);
 ```
 
-As with the async version you can optionally leave off the path argument.
+As with the async version you can optionally leave off the path and revision
+arguments.
 
 **NOTE**: You must have the `svn` command line tool in your path.
 
