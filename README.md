@@ -71,7 +71,7 @@ Instead of this:
 ```
 
 ## Release History
-*(Nothing yet)*
+- v0.2.0 2014-07-11 Allow users to specify revision
 
 ## License
 Copyright (c) 2013 jtrussell  
