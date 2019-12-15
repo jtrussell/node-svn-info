@@ -70,6 +70,29 @@ Instead of this:
 'Last Changed Date': '...'
 ```
 
+### Git
+
+If you use svn via `git svn` the modules exports a method `git`
+you may use to asynchronously get `git svn info` for a given path and revision:
+
+
+```javascript
+require('svn-info').git('path/to/folder/under/svn', 'HEAD', function (err, info) {
+  if (err) {
+    throw err
+  }
+  do_something_with(info)
+})
+```
+
+There's also an synchronous flavor:
+
+```javascript
+var info = require('svn-info').git.sync('my/repo/path', 194)
+do_something_with(info)
+```
+
+
 ## Release History
 - v0.2.0 2014-07-11 Allow users to specify revision
 
