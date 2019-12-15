@@ -1,7 +1,6 @@
-'use strict';
+'use strict'
 
-module.exports = function(grunt) {
-
+module.exports = function (grunt) {
   grunt.initConfig({
     simplemocha: {
       files: ['test/**/*_test.js']
@@ -42,14 +41,13 @@ module.exports = function(grunt) {
         push: false
       }
     }
-  });
+  })
 
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-simple-mocha');
-  grunt.loadNpmTasks('grunt-bump');
+  grunt.loadNpmTasks('grunt-contrib-jshint')
+  grunt.loadNpmTasks('grunt-contrib-watch')
+  grunt.loadNpmTasks('grunt-simple-mocha')
+  grunt.loadNpmTasks('grunt-bump')
 
-  grunt.registerTask('test', ['simplemocha']);
-  grunt.registerTask('default', ['jshint', 'test']);
-
-};
+  grunt.registerTask('test', ['simplemocha'])
+  grunt.registerTask('default', ['jshint', 'test'])
+}
