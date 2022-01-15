@@ -25,6 +25,6 @@
   },
   "keywords": [],
   "dependencies": {
-    "shelljs": "~0.2.6"
+    "shelljs": "~0.8.5"
   }
 }
