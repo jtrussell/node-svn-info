@@ -1,7 +1,7 @@
 {
   "name": "svn-info",
   "description": "Parse svn info.",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "homepage": "https://github.com/jtrussell/node-svn-info",
   "author": {
     "name": "jtrussell",
@@ -25,6 +25,6 @@
   },
   "keywords": [],
   "dependencies": {
-    "shelljs": "~0.2.6"
+    "shelljs": "~0.8.5"
   }
 }
